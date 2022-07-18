@@ -1,0 +1,23 @@
+{
+  "name": "post-redirect-get",
+  "version": "1.0.0",
+  "description": "POST-redirect-GET is a standard pattern used within web application development. It provides a clean separation of concerns when using web interfaces to update data (POST) and subsequently view data (GET), with a redirect as a seamless transition between the two operations.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hitubaldaniya/POST-redirect-GET.git"
+  },
+  "author": "Hitesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hitubaldaniya/POST-redirect-GET/issues"
+  },
+  "homepage": "https://github.com/hitubaldaniya/POST-redirect-GET#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}

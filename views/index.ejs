@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>POST-redirect-GET</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+
+  <form action="/" method="post">
+    <div class="input-group mb-3">
+      <input type="text" id="text" class="form-control" placeholder="User Text" value="<%= text %>" name="text" />
+      <div class="col-md-12" id="message">
+        <% if (error) { %>
+          Please enter valid text.
+        <% } %>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+
+<script>
+
+$("button:submit").click(function(e){
+
+    let uname = $('#text').val();
+
+    if(uname.trim() == ''){
+      $('#message').empty().text('Please enter some text.');
+      e.preventDefault();
+    }
+
+});
+</script>
+
+</html>
